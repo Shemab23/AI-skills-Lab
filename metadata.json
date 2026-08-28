@@ -1,0 +1,6 @@
+{
+  "name": "AI Bootcamp",
+  "description": "Create. Automate. Get paid — all with AI. A premier 4-week in-person bootcamp by Laranova × Hexa Media in Lefkoşa, Cyprus.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
