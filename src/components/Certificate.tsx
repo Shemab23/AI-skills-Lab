@@ -1,4 +1,5 @@
 import React from "react";
+import certificate from "../assets/certificate.jpg";
 
 export const Certificate = () => {
   return (
@@ -8,7 +9,7 @@ export const Certificate = () => {
         <div className="relative">
           <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
             <img
-              src="../public/certificate.jpg"
+              src={certificate}
               alt="Bootcamp completion certificate"
               className="h-auto w-full object-cover"
             />

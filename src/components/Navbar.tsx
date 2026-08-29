@@ -69,7 +69,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
           >
             <img
               className="w-8 h-8 rounded-lg tracking-tight transition-transform group-hover:scale-105 shadow-sm shadow-blue-500/20"
-              src="../../public/icon.png"
+              src="/icon.png"
             />
             <div className="flex flex-col">
               <span className="font-bold text-2xl leading-tight tracking-tight text-slate-900">

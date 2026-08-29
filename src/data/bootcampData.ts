@@ -11,6 +11,9 @@ import projectMediaStudio from '../assets/images/project_media_studio_blue_17879
 import instructorTimothy from '../assets/Timothy.jpeg';
 import instructorEmmanuella from '@/src/assets/Ellah.jpeg';
 
+import Certificate  from '@/src/assets/certificateimg.jpg';
+import logo from '@/public/icon.png';
+
 import easyInvoice from '../assets/EasyInvoice.png';
 import tortoiseback from '../assets/tortoiseBack.png';
 import pureClean from '../assets/PureClean.png';
@@ -48,6 +51,8 @@ export const ASSETS = {
   instructorTimothy,
   instructorEmmanuella,
 };
+
+
 
 type person = {name: string,role: string}
 export const student: person[] =[

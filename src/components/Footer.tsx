@@ -16,7 +16,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
             <div className="flex items-center gap-3">
               <img
                 className="w-12 h-12 rounded-md  flex items-center shadow-xs"
-                src="../public/icon.png"
+                src="/icon.png"
                 alt="Logo"
               />
               <span className="font-bold text-2xl tracking-tight text-white">
