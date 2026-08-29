@@ -1,12 +1,20 @@
-import React from 'react';
-import { ArrowUpRight, CheckCircle2, ShieldCheck, Sparkles, Cpu } from 'lucide-react';
-import { STATS, VALUE_PILLARS, ASSETS } from '../data/bootcampData';
+import React from "react";
+import {
+  ArrowUpRight,
+  CheckCircle2,
+  ShieldCheck,
+  Sparkles,
+  Cpu,
+} from "lucide-react";
+import { STATS, VALUE_PILLARS, ASSETS } from "../data/bootcampData";
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="py-20 sm:py-28 lg:py-36 border-b border-slate-200/80 bg-white">
+    <section
+      id="about"
+      className="py-20 sm:py-28 lg:py-36 border-b border-slate-200/80 bg-white"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Editorial Narrative */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start mb-20 sm:mb-24">
           <div className="lg:col-span-4">
@@ -16,19 +24,33 @@ export const AboutSection: React.FC = () => {
             <h3 className="text-xl font-display font-semibold text-slate-900">
               Pragmatic AI Engineering
             </h3>
+            <img
+              src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*Zs6aQV60j48BgiVshm9upA.png"
+              alt="Pragmatic AI Engineering"
+              className="w-75 h-75  object-cover"
+            />
           </div>
 
           <div className="lg:col-span-8">
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-slate-950 leading-[1.08] mb-6 text-balance">
-              Most people learn to prompt. We teach you to <span className="text-blue-600 font-semibold">ship and get paid.</span>
+              Most people learn to prompt. We teach you to{" "}
+              <span className="text-blue-600 font-semibold">
+                ship and get paid.
+              </span>
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 text-slate-600 text-base leading-relaxed">
               <p>
-                Clients and businesses do not pay for prompts or superficial AI concepts. They pay for functioning software applications, automated operations, and commercial visual campaigns that drive measurable value.
+                Clients and businesses do not pay for prompts or superficial AI
+                concepts. They pay for functioning software applications,
+                automated operations, and commercial visual campaigns that drive
+                measurable value.
               </p>
               <p>
-                In our Lefkoşa studio, you build real software with experienced founders and engineers. In 4 focused weeks, you go from conceptual ideas to production apps with live URLs, databases, and payment capabilities.
+                In our Lefkoşa studio, you build real software with experienced
+                founders and engineers. In 4 focused weeks, you go from
+                conceptual ideas to production apps with live URLs, databases,
+                and payment capabilities.
               </p>
             </div>
           </div>
@@ -66,7 +88,8 @@ export const AboutSection: React.FC = () => {
               Create. Automate. Monetize.
             </h3>
             <p className="text-slate-600 text-base mt-2">
-              Three interconnected disciplines engineered to give you complete leverage with AI.
+              Three interconnected disciplines engineered to give you complete
+              leverage with AI.
             </p>
           </div>
 
@@ -109,7 +132,10 @@ export const AboutSection: React.FC = () => {
                       Tangible Deliverables
                     </span>
                     {pillar.outcomes.map((outcome, i) => (
-                      <div key={i} className="flex items-start gap-2 text-xs text-slate-700">
+                      <div
+                        key={i}
+                        className="flex items-start gap-2 text-xs text-slate-700"
+                      >
                         <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 shrink-0 mt-0.5" />
                         <span>{outcome}</span>
                       </div>
@@ -120,9 +146,7 @@ export const AboutSection: React.FC = () => {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );
 };
-

@@ -3,26 +3,30 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { AboutSection } from './components/AboutSection';
-import { CurriculumSection } from './components/CurriculumSection';
-import { InstructorsSection } from './components/InstructorsSection';
-import { StudentProjectsCarousel } from './components/StudentProjectsCarousel';
-import { NextCohortSection } from './components/NextCohortSection';
-import { TestimonialsSection } from './components/TestimonialsSection';
-import { FAQSection } from './components/FAQSection';
-import { FinalCTASection } from './components/FinalCTASection';
-import { Footer } from './components/Footer';
-import { ApplicationModal } from './components/ApplicationModal';
-import { ProjectPreviewModal } from './components/ProjectPreviewModal';
-import { StudentProject } from './types';
+import React, { useState } from "react";
+import { Navbar } from "./components/Navbar";
+import { Hero } from "./components/Hero";
+import { AboutSection } from "./components/AboutSection";
+import { CurriculumSection } from "./components/CurriculumSection";
+import { InstructorsSection } from "./components/InstructorsSection";
+import { StudentProjectsCarousel } from "./components/StudentProjectsCarousel";
+import { NextCohortSection } from "./components/NextCohortSection";
+import { TestimonialsSection } from "./components/TestimonialsSection";
+import { FAQSection } from "./components/FAQSection";
+import { FinalCTASection } from "./components/FinalCTASection";
+import { Footer } from "./components/Footer";
+import { ApplicationModal } from "./components/ApplicationModal";
+import { ProjectPreviewModal } from "./components/ProjectPreviewModal";
+import { StudentProject } from "./types";
+import { Certificate } from "./components/Certificate";
 
 export default function App() {
   const [isApplicationModalOpen, setIsApplicationModalOpen] = useState(false);
-  const [selectedTopicForModal, setSelectedTopicForModal] = useState<string | undefined>(undefined);
-  const [inspectedProject, setInspectedProject] = useState<StudentProject | null>(null);
+  const [selectedTopicForModal, setSelectedTopicForModal] = useState<
+    string | undefined
+  >(undefined);
+  const [inspectedProject, setInspectedProject] =
+    useState<StudentProject | null>(null);
 
   const handleOpenApplicationModal = (topicTitle?: string) => {
     setSelectedTopicForModal(topicTitle);
@@ -69,6 +73,9 @@ export default function App() {
         {/* 6. Next Cohort Inclusions & Tuition */}
         <NextCohortSection onOpenModal={() => handleOpenApplicationModal()} />
 
+        {/*Certificate */}
+        <Certificate />
+
         {/* 7. Alumni Testimonials */}
         <TestimonialsSection />
 
@@ -98,4 +105,3 @@ export default function App() {
     </div>
   );
 }
-

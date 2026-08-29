@@ -8,12 +8,37 @@ import projectDocuBrain from '../assets/images/project_docubrain_1787920671314.j
 import projectAutoReach from '../assets/images/project_autoreach_1787920687952.jpg';
 import projectSaasCrm from '../assets/images/project_saas_crm_blue_1787919262823.jpg';
 import projectMediaStudio from '../assets/images/project_media_studio_blue_1787919280060.jpg';
-import instructorTimothy from '../assets/images/instructor_timothy_realistic_1787919222298.jpg';
-import instructorEmmanuella from '../assets/images/instructor_emmanuella_realistic_1787919235269.jpg';
+import instructorTimothy from '../assets/Timothy.jpeg';
+import instructorEmmanuella from '@/src/assets/Ellah.jpeg';
+
+import easyInvoice from '../assets/EasyInvoice.png';
+import tortoiseback from '../assets/tortoiseBack.png';
+import pureClean from '../assets/PureClean.png';
+import peacefullLife from '../assets/peacefulLife.png';
+import pureShine from '../assets/pureShine.png';
+import christianism from '../assets/christianism.png';
+import rubberbandpromo from '../assets/rubberBandPromo.png';
+import annieYap from '../assets/annieYap.png';
+import camppromo from '../assets/camppromo.png';
+import winterEd from '../assets/winterEd.png';
+import contentM from '../assets/flyer.png';
+import campwebsite from '../assets/campwebsite.png';
 
 export const ASSETS = {
   heroTeaching,
   pillarCreate,
+  easyInvoice,
+  tortoiseback,
+  pureClean,
+  pureShine,
+  peacefullLife,
+  christianism,
+  rubberbandpromo,
+  annieYap,
+  camppromo,
+  winterEd,
+  contentM,
+  campwebsite,
   pillarAutomate,
   pillarMonetize,
   projectDocuBrain,
@@ -23,6 +48,32 @@ export const ASSETS = {
   instructorTimothy,
   instructorEmmanuella,
 };
+
+type person = {name: string,role: string}
+export const student: person[] =[
+  {
+    name: "Bruno Shema",
+    role: "developer"
+  },
+  {
+    name:"Annie",
+    role:"content creator"
+  },
+  {
+    name:"Bethel",
+    role:"content creator"
+  }
+]
+export const instructor: person[] =[
+  {
+    name: "Timothy Ajide",
+    role: "Web Designer · AI Automation Specialist"
+  },
+  {
+    name: "Dr. Emmanuella Imo Akubuko",
+    role: "Communications Professional · AI Practitioner"
+  }
+]
 
 export const COHORT_INFO = {
   name: "Winter Edition",
@@ -294,90 +345,211 @@ export const INSTRUCTORS: Instructor[] = [
 ];
 
 export const STUDENT_PROJECTS: StudentProject[] = [
-  {
-    id: "pulseflow-crm",
-    name: "PulseFlow AI Sales CRM",
-    category: "Full-Stack Web App",
-    description: "An automated lead qualification dashboard that transcribes sales calls, drafts contextual follow-up emails with AI, and syncs deal pipeline metrics to Stripe.",
-    student: "Bruno Shema",
-    studentRole: "Freelance AI Builder",
-    instructor: "Timothy Ajide",
-    image: ASSETS.pillarCreate,
-    tech: ["React", "TypeScript", "Tailwind CSS", "Gemini 2.5", "Stripe API"],
-    revenueOrMetric: "$2,400 earned in first 3 weeks",
-    liveUrl: "https://pulseflow-crm.app",
-    summaryDetails: "Built in 14 days during Weeks 2 and 3. Deployed for 3 local real estate agencies in Lefkoşa to automate sales inquiries.",
-  },
-  {
-    id: "kinetix-studio",
-    name: "Kinetix Generative Studio",
-    category: "AI Media Production",
-    description: "A commercial video generation suite that produces 9:16 vertical ads from e-commerce product links, complete with AI voice narration and captions.",
-    student: "Elena Kazantzi",
-    studentRole: "Digital Marketing Specialist",
-    instructor: "Dr. Emmanuella",
-    image: projectMediaStudio,
-    tech: ["Diffusion Pipelines", "Audio Synthesis", "Remotion", "Node.js"],
-    revenueOrMetric: "450,000+ social video views generated",
-    liveUrl: "https://kinetix-studio.app",
-    summaryDetails: "Created for e-commerce brands, slashing creative production turnaround from 5 days to 12 minutes per campaign.",
-  },
-  {
-    id: "autoreach-pipeline",
-    name: "AutoReach Inbound Pipeline",
-    category: "Autonomous Agent & CRM",
-    description: "An intelligent lead capture agent that monitors inbound inquiries, enriches company data, and scores sales urgency automatically.",
-    student: "Tariq Mansoor",
-    studentRole: "AI Automation Consultant",
-    instructor: "Timothy Ajide",
-    image: projectAutoReach,
-    tech: ["Autonomous Loops", "Webhooks", "PostgreSQL", "Tailwind CSS"],
-    revenueOrMetric: "Active with $600/month recurring retainer",
-    liveUrl: "https://autoreach-demo.app",
-    summaryDetails: "Connects web form webhooks to multi-model AI classifiers that draft custom quote proposals within 30 seconds.",
-  },
-  {
-    id: "docubrain-ai",
-    name: "DocuBrain Legal Assistant",
-    category: "Enterprise AI Document Tool",
-    description: "An intelligent contract analysis dashboard that ingests multi-page agreements, flags non-standard liability clauses, and provides actionable summaries.",
-    student: "Kerem Yilmaz",
-    studentRole: "Product Specialist",
-    instructor: "Timothy Ajide",
-    image: projectDocuBrain,
-    tech: ["RAG Pipelines", "Vector Search", "React", "TypeScript"],
-    revenueOrMetric: "Tested with 150+ legal contracts",
-    liveUrl: "https://docubrain-preview.app",
-    summaryDetails: "Processes PDF contracts in seconds, providing clause-by-clause risk scoring and natural language query capabilities.",
-  },
-  {
-    id: "brandforge-suite",
-    name: "BrandForge Creative Suite",
-    category: "Brand Design Engine",
-    description: "A generative brand identity tool that crafts coordinated typography, color palettes, vector marks, and visual style guides in one workflow.",
-    student: "Maya Solon",
-    studentRole: "UI/UX Designer",
-    instructor: "Dr. Emmanuella",
-    image: ASSETS.pillarMonetize,
-    tech: ["Diffusion Models", "Design Tokens", "React", "Tailwind"],
-    revenueOrMetric: "Used by 8 local agency clients",
-    liveUrl: "https://brandforge-design.app",
-    summaryDetails: "Delivers comprehensive brand books, mood boards, and social media templates with consistent styling.",
-  },
-  {
-    id: "nexbot-hospitality",
-    name: "NexBot Hospitality Concierge",
-    category: "WhatsApp AI Concierge",
-    description: "A multi-lingual reservation and guest concierge assistant deployed for boutique hotels, answering questions and booking amenities 24/7.",
-    student: "Alexander Cole",
-    studentRole: "Hospitality Tech Manager",
-    instructor: "Timothy Ajide",
-    image: ASSETS.pillarAutomate,
-    tech: ["WhatsApp API", "n8n Automation", "Gemini Pro", "Supabase"],
-    revenueOrMetric: "Deployed across 4 hotel properties",
-    liveUrl: "https://nexbot-hotel.app",
-    summaryDetails: "Handles guest inquiries in English, Turkish, and Russian with a 98% automated resolution rate.",
-  },
+ {
+  id: "project1",
+  name: "Easy Invoice",
+  category: "AI Powered Web App",
+  description:
+    "An instant quotation and invoice generator built for small businesses. It handles taxes, discounts, extra charges, currency, and calculations automatically, so users only need to enter their products and amounts.",
+  student: student[0].name,
+  studentRole: student[0].role,
+  instructor: instructor[0].name,
+  image: ASSETS.easyInvoice,
+  tech: ["ChatGPT", "Google AI Studio", "Claude AI"],
+  revenueOrMetric: "Completed digital project",
+  liveUrl: "https://easy-invoice-ltd.vercel.app/",
+  summaryDetails:
+    "The current MVP was built in approximately 20 hours, with AI significantly accelerating development. It is already stable enough for current client use, with further improvements becoming easier as the product evolves. A practical example of how AI-powered development can turn an idea into a working product in a very short time.",
+},
+
+{
+  id: "project2",
+  name: "Why Tortoises Have a Cracked Back",
+  category: "AI-Assisted Creative Project",
+  description:
+    "A creative digital storytelling project developed as part of the bootcamp, combining AI-assisted content creation with structured storytelling and visual presentation.",
+  student: student[1].name,
+  studentRole: student[1].role,
+  instructor: instructor[1].name,
+  image: ASSETS.tortoiseback,
+  tech: ["ChatGPT"," gemini ai","canva"],
+  revenueOrMetric: "Completed creative project",
+  liveUrl:
+    "https://res.cloudinary.com/dmn1dhmxe/image/upload/v1787908289/why_tortoise_have_cracked_back_tdguhk.pdf",
+  summaryDetails:
+    "A practical demonstration of using AI tools to move from an idea and written concept to a finished, shareable digital piece.",
+},
+
+{
+  id: "project3",
+  name: "Purest Cleaning",
+  category: "AI Powered Web App",
+  description:
+    "A professional business website created to give a cleaning service a clear online presence, communicate its services, and make it easier for potential customers to discover and contact the business.",
+  student: student[2].name,
+  studentRole: student[2].role,
+  instructor: instructor[0].name,
+  image: ASSETS.pureClean,
+  tech: ["ChatGPT", "Google AI Studio", "Claude AI"],
+  revenueOrMetric: "Live business website",
+  liveUrl: "https://purest-cleaning.vercel.app/",
+  summaryDetails:
+    "A practical example of using AI-assisted development to take a real business requirement and turn it into a complete, responsive website that can be deployed and used immediately.",
+},
+
+{
+  id: "project4",
+  name: "The Peaceful Life",
+  category: "Digital Creative Project",
+  description:
+    "A creative digital project focused on presenting an idea through structured written content and a polished final document.",
+  student: student[2].name,
+  studentRole: student[2].role,
+  instructor: instructor[1].name,
+  image: ASSETS.peacefullLife,
+  tech: ["ChatGPT"," gemini ai","canva"],
+  revenueOrMetric: "Completed creative project",
+  liveUrl:
+    "https://res.cloudinary.com/dmn1dhmxe/image/upload/v1787908253/the_peaceful_life_jg8oxp.pdf",
+  summaryDetails:
+    "The project demonstrates how AI can support the full creative workflow, from developing the initial idea and content to producing a finished document ready to share.",
+},
+
+{
+  id: "project5",
+  name: "Pure Shine Services",
+  category: "Business Website",
+  description:
+    "A business website designed to give a service-based company a professional online presence, clearly present its offering, and provide customers with a direct way to learn more about the business.",
+  student: student[1].name,
+  studentRole: student[1].role,
+  instructor: instructor[0].name,
+  image: ASSETS.pureShine,
+  tech: ["ChatGPT", "Google AI Studio", "Claude AI"],
+  revenueOrMetric: "Live business website",
+  liveUrl: "https://pureshineservices.vercel.app/",
+  summaryDetails:
+    "Another practical example of building a complete client-facing website with AI-assisted development, from the initial concept through implementation and deployment.",
+},
+
+{
+  id: "project6",
+  name: "Christianism",
+  category: "Digital Content Project",
+  description:
+    "A structured digital content project developed around a Christian-themed subject, demonstrating the use of AI to research, organize, write, and present information in a finished format.",
+  student: student[0].name,
+  studentRole: "student[0].role",
+  instructor: instructor[1].name,
+  image: ASSETS.christianism,
+  tech: ["ChatGPT"," gemini ai","canva"],
+  revenueOrMetric: "Completed digital project",
+  liveUrl:
+    "https://res.cloudinary.com/dmn1dhmxe/image/upload/v1787222047/Christianism_nchctq.pdf",
+  summaryDetails:
+    "A practical demonstration of using AI throughout the content-production process, turning a broad subject into an organized and shareable final document.",
+},
+
+{
+  id: "project7",
+  name: "rubberBand Promo video",
+  category: "AI Video Production",
+  description:
+    "A short-form video project created as an example of how AI can be used to develop and produce engaging visual content.",
+  student: student[2].name,
+  studentRole: student[2].role,
+  instructor: instructor[1].name,
+  image: ASSETS.rubberbandpromo,
+  tech: ["ChatGPT", "Google AI Studio", "Claude AI"],
+  revenueOrMetric: "Published short-form video",
+  liveUrl: "https://www.youtube.com/shorts/l_di03kUqNw",
+  summaryDetails:
+    "A practical exploration of AI-assisted content creation, showing how an idea can move from concept to a finished piece of short-form media.",
+},
+
+{
+  id: "project8",
+  name: "Annie's short video",
+  category: "AI Video Production",
+  description:
+    "A short-form creative video produced using an AI-assisted workflow, from developing the concept to preparing the final visual content.",
+  student: student[1].name,
+  studentRole: student[1].role,
+  instructor: instructor[1].name,
+  image: ASSETS.annieYap,
+  tech: ["ChatGPT", "Google google flow", "CapCut"],
+  revenueOrMetric: "Published short-form video",
+  liveUrl: "https://www.youtube.com/shorts/OjbYQ295rYo",
+  summaryDetails:
+    "Demonstrates how AI can reduce the distance between an initial creative idea and a finished piece of content that is ready to publish.",
+},
+
+{
+  id: "project9",
+  name: "AI BOOTCAMP PROMO BY ANNIE YAPS",
+  category: "AI Video Production",
+  description:
+    "A finished short-form video created through an AI-assisted creative workflow, combining generated ideas, content development, and visual production.",
+  student: student[1].name,
+  studentRole: student[1].role,
+  instructor: instructor[1].name,
+  image: ASSETS.camppromo,
+  tech: ["ChatGPT", "Google AI Studio", "Claude AI"],
+  revenueOrMetric: "Published short-form video",
+  liveUrl: "https://www.youtube.com/shorts/aQCuDFLZch4",
+  summaryDetails:
+    "Another practical example of applying AI to creative production and turning a concept into a finished piece of media.",
+},
+
+{
+  id: "project10",
+  name: "annie yaps video ad-winter ed",
+  category: "AI Video Production",
+  description:
+    "A short-form video project created as part of the bootcamp, demonstrating an AI-assisted approach to developing and producing digital media.",
+  student: student[1].name,
+  studentRole: student[1].role,
+  instructor: instructor[1].name,
+  image: ASSETS.winterEd,
+  tech: ["ChatGPT", "Google AI Studio", "Claude AI"],
+  revenueOrMetric: "Published short-form video",
+  liveUrl: "https://www.youtube.com/shorts/pWSA_SJG7e0",
+  summaryDetails:
+    "The project shows how modern AI tools can support the creative process while allowing a single builder to produce finished content much faster.",
+},
+
+{
+  id: "project11",
+  name: "Marketing Flyer",
+  category: "Content Management",
+  description:
+    "A professionally designed marketing flyer created to communicate a business offer clearly, present key information visually, and produce content that is ready to share with customers.",
+  student: student[0].name,
+  studentRole: student[0].role,
+  instructor: instructor[1].name,
+  image: ASSETS.contentM,
+  tech: ["ChatGPT", "Pomeli", "Gemini AI"],
+  revenueOrMetric: "Publish-ready marketing content",
+  liveUrl: "https://drive.google.com/drive/folders/1jrUEDyaZW9Vuls8iwmaAe1mPzi1j3qxf?usp=drive_link",
+  summaryDetails:
+    "A practical example of using AI to support the content creation process, from developing the message and structure to producing polished marketing material ready for distribution.",
+},
+{
+  id: "project11",
+  name: "AI BootCamp Website",
+  category: "AI-Assisted Web Development",
+  description:
+    "A full website prototype built for the AI BootCamp, using AI-assisted development to move from an initial concept to a working, deployed website.",
+  student: student[0].name,
+  studentRole: student[0].role,
+  instructor: instructor[1].name,
+  image: ASSETS.campwebsite,
+  tech: ["TypeScript", "React", "ChatGPT", "Claude", "Google Flow", "Vercel", "Git"],
+  revenueOrMetric: "Live deployed bootcamp website",
+  liveUrl: "https://ai-skills-lab.vercel.app/",
+  summaryDetails:
+    "The website started as a prototype developed with ChatGPT, Claude, and Google Flow. The project was then pushed to Git, connected to Vercel for deployment, and pulled into VS Code for hands-on refinement. Most of the implementation is written in TypeScript, with AI used throughout the development process to accelerate building, debugging, and iteration.",
+},
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
